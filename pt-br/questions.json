@@ -1,0 +1,272 @@
+{
+    "01": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "easy"
+    },
+    "02": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "easy"
+    },
+    "03": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "easy"
+    },
+    "04": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "easy"
+    },
+    "05": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "easy"
+    },
+    "06": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "easy"
+    },
+    "07": {
+        "title": "QUANTAS PARTES DE JOJO EXISTEM",
+        "options": [
+            "9",
+            "*8",
+            "7",
+            "6"
+        ],
+        "difficulty": "easy"
+    },
+    "08": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "09": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "10": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "11": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "12": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "13": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "14": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "15": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "16": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "17": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "18": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "medium"
+    },
+    "19": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    },
+    "20": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    },
+    "21": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    },
+    "22": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    },
+    "23": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    },
+    "24": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    },
+    "25": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    },
+    "26": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    },
+    "27": {
+        "title": "SAMPLE TEXT",
+        "options": [
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
+        ],
+        "difficulty": "hard"
+    }
+}

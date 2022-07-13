@@ -1,0 +1,366 @@
+# NOTE: multiple labels with empty text were used to
+# arrange the layout nicely, I could make it in a
+# better way but this is just faster for me
+
+#:import Factory kivy.factory.Factory
+WindowManager:
+    FirstScreen:
+    GameScreen:
+    LoseScreen:
+    WinScreen:
+    
+
+<GridLayout>
+    size: root.width, root.height
+
+<Label>
+    # yellow text
+    color: (1, 1, 0, 1)
+    # wanted to put this here but for some reason it crashes popups
+    # text_size: self.size
+    # instead i have to add it to every single label :)
+    halign: "center"
+    valign: "middle"
+
+<Button>
+    # red button
+    background_color: (250 / 255, 65 / 255, 65 / 255, 1)
+    on_press: self.background_color = (1, 0, 0, 1)
+    # white text
+    color: (1, 1, 1, 1)
+
+<Cards@Popup>
+    auto_dismiss: False
+    size_hint: 0.9, 0.5
+    title: "CARDS"
+    
+    GridLayout:
+        rows: 4
+        Label:
+            text_size: self.size
+            text:"CHOOSE A CARD"
+        GridLayout:
+            cols:4
+            # all options do the same, what a surprise :o
+            Button:
+                on_release: 
+                    app.root.cards_help()
+                    root.dismiss()
+            Button:
+                on_release: 
+                    app.root.cards_help()
+                    root.dismiss()
+            Button:
+                on_release: 
+                    app.root.cards_help()
+                    root.dismiss()
+            Button:
+                on_release: 
+                    app.root.cards_help()
+                    root.dismiss()
+        Label:
+            text: ""
+        Button:
+            text_size: self.size
+            text: "CANCEL"
+            on_release: root.dismiss()
+    
+<Signs@Popup>
+    auto_dismiss: False
+    size_hint: 0.9, 0.5
+    title: "SIGNS"
+
+    GridLayout:
+        rows: 2
+        Label:
+            text_size: self.size
+            text: f"The signs of number {app.root.signs_help()} was the most chosen one"
+        GridLayout:
+            cols: 3
+            Label:
+                text: ""
+            GridLayout:
+                rows: 3
+                Label:
+                    text: ""
+                Button:
+                    text_size: self.size
+                    text: "CLOSE"
+                    on_release: root.dismiss()
+                Label:
+                    text: ""
+            Label:
+                text: ""
+
+<Academicals@Popup>
+    auto_dismiss: False
+    size_hint: 0.9, 0.5
+    title: "ACADEMICALS"
+
+    GridLayout:
+        rows: 2
+        Label:
+            text_size: self.size
+            text: f"The majority thinks that the option {app.root.academicals_help()} is the correct one"
+        GridLayout:
+            cols: 3
+            Label:
+                text: ""
+            GridLayout:
+                rows: 3
+                Label:
+                    text: ""
+                Button:
+                    text_size: self.size
+                    text: "CLOSE"
+                    on_release: root.dismiss()
+                Label:
+                    text: ""
+            Label:
+                text: ""
+
+<MilionMessage@Popup>
+    auto_dismiss: False
+    size_hint: 0.95, 0.95
+    title: "WARNING"
+
+    GridLayout:
+        rows: 2
+        Label:
+            text_size: self.size
+            text: f"HELPS WILL NOT BE AVALIABLE FOR THE NEXT QUESTION"
+        GridLayout:
+            cols: 2
+            GridLayout:
+                rows: 3
+                Label:
+                    text: ""
+                GridLayout:
+                    cols: 2
+                    Label:
+                        text: ""
+                    Button:
+                        text_size: self.size
+                        text: "OK"
+                        on_release: root.dismiss()
+                Label:
+                    text: ""
+            GridLayout:
+                rows: 3
+                Label:
+                    text: ""
+                GridLayout:
+                    cols: 2
+                    Button:
+                        text_size: self.size
+                        text: "STOP"
+                        on_release: 
+                            app.root.give_up()
+                            app.root.current = "lose"
+                            root.dismiss()
+                    Label:
+                        text: ""
+                Label:
+                    text: ""
+
+<FirstScreen>
+    name: "start"
+    
+    GridLayout:
+        rows: 3
+        Label:
+            text_size: self.size
+            text: "SHOW DO MILHÃO"
+        # ugly way of centering the button and making it small
+        GridLayout:
+            cols: 3
+            Label:
+                text: ""
+            GridLayout:
+                rows: 3
+                Label:
+                    text: ""
+                Button:
+                    text_size: self.size
+                    text: "START"
+                    on_release: app.root.current = "game"
+                Label:
+                    text: ""
+            Label:
+                text: ""
+        Label:
+            text: ""
+
+<GameScreen>
+    name: "game"
+    
+    title: title
+    one: one
+    two: two
+    three: three
+    four: four
+    cards: cards
+    signs: signs
+    academicals: academicals
+    skip_1: skip_1
+    skip_2: skip_2
+    skip_3: skip_3
+    stop_btn: stop_btn
+
+
+    GridLayout:
+        cols: 1
+        GridLayout:
+            rows: 5
+            Label:
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+                id: title
+                text: root.question.title
+            Button:
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+                id: one
+                text: f"1: {root.question.options[0]}"
+                on_release: root.check_one()
+            Button:
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+                id: two
+                text: f"2: {root.question.options[1]}"
+                on_release: root.check_two()
+            Button:
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+                id: three
+                text: f"3: {root.question.options[2]}"
+                on_release: root.check_three()
+            Button:
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+                id: four
+                text: f"4: {root.question.options[3]}"
+                on_release: root.check_four()
+        GridLayout:
+            rows: 3
+            Label:
+                text_size: self.size
+                text: "HELP:"
+            GridLayout:
+                cols: 3
+                rows: 2
+                Button:
+                    text_size: self.size
+                    id: cards
+                    text: "CARDS"
+                    on_release: Factory.MilionMessage().open()
+                Button:
+                    text_size: self.size
+                    id: signs
+                    text: "SIGNS"
+                    on_release: Factory.Signs().open()
+                Button:
+                    text_size: self.size
+                    id: academicals
+                    text: "ACADEMICALS"
+                    on_release: Factory.Academicals().open()
+                Button:
+                    text_size: self.size
+                    id: skip_1
+                    text: "SKIP"
+                    on_release: root.skip1()
+                Button:
+                    text_size: self.size
+                    id: skip_2
+                    text: "SKIP"
+                    on_release: root.skip2()
+                Button:
+                    text_size: self.size
+                    id: skip_3
+                    text: "SKIP"
+                    on_release: root.skip3()
+            GridLayout:
+                cols: 3
+                Label:
+                    text_size: self.size
+                    text: "MISS: "     
+                Button:
+                    id: stop_btn
+                    text_size: self.size
+                    text: "STOP: "
+                    on_release:
+                        root.stop()
+                        app.root.current = "lose"
+                Label:
+                    text_size: self.size
+                    text: "NEXT:"
+
+<LoseScreen>
+    name: "lose"
+    
+    score_message: score_message
+
+    GridLayout:
+        rows: 2
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                text: "GAME OVER"
+            Label:
+                id: score_message
+                text: ""
+        GridLayout:
+            cols: 3
+            Label:
+                text: ""
+            GridLayout:
+                rows: 3
+                Label:
+                    text: ""
+                Button:
+                    text_size: self.size
+                    text: "PLAY AGAIN"
+                    on_release: app.root.current = "start"
+                Label:
+                    text: ""
+            Label:
+                text: ""
+
+<WinScreen>
+    name: "win"
+    
+    GridLayout:
+        rows: 2
+        GridLayout:
+            rows: 3
+            Label:
+                text_size: self.size
+                text: "GAME OVER"
+            Label:
+                text_size: self.size
+                text: "CONGRATULATIONS YOU WON!"
+            Label:
+                text_size: self.size
+                text: "Score: 15"
+        GridLayout:
+            cols: 3
+            Label:
+                text: ""
+            GridLayout:
+                rows: 3
+                Label:
+                    text: ""
+                Button:
+                    text_size: self.size
+                    text: "PLAY AGAIN"
+                    on_release: app.root.current = "start"
+                Label:
+                    text: ""
+            Label:
+                text: ""

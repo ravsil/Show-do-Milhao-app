@@ -1,5 +1,5 @@
 # Show-do-Milhao
-An clone made with kivy of the famous brazillian TV show Show do Milhão
+A clone made with kivy of the famous brazillian TV show Show do Milhão
 
 ## Show do Milhão
 Show do Milhão is a quiz game created by the brazillian TV channel SBT in 1999. It consists of 15 questions to answer with various kinds of helps throughout the game.

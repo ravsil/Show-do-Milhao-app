@@ -60,12 +60,12 @@
         "difficulty": "easy"
     },
     "07": {
-        "title": "QUANTAS PARTES DE JOJO EXISTEM",
+        "title": "SAMPLE TEXT",
         "options": [
-            "9",
-            "*8",
-            "7",
-            "6"
+            "*SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT",
+            "SAMPLE TEXT"
         ],
         "difficulty": "easy"
     },

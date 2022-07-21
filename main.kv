@@ -1,6 +1,6 @@
-# NOTE: multiple labels with empty text were used to
-# arrange the layout nicely, I could make it in a
-# better way but this is just faster for me
+# NOTE: multiple empty labels were used to arrange
+# the layout nicely. I could make it in a better
+# way but this is just faster for me
 
 #:import Factory kivy.factory.Factory
 WindowManager:
@@ -8,7 +8,8 @@ WindowManager:
     GameScreen:
     LoseScreen:
     WinScreen:
-    
+    AddQuestionScreen:
+    RemoveQuestionScreen:    
 
 <GridLayout>
     size: root.width, root.height
@@ -59,7 +60,6 @@ WindowManager:
                     app.root.cards_help()
                     root.dismiss()
         Label:
-            text: ""
         Button:
             text_size: self.size
             text: "CANCEL"
@@ -74,23 +74,19 @@ WindowManager:
         rows: 2
         Label:
             text_size: self.size
-            text: f"The signs of number {app.root.signs_help()} was the most chosen one"
+            text: f"The sign of number {app.root.signs_help()} was the most chosen one"
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "CLOSE"
                     on_release: root.dismiss()
                 Label:
-                    text: ""
             Label:
-                text: ""
 
 <Academicals@Popup>
     auto_dismiss: False
@@ -105,19 +101,15 @@ WindowManager:
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "CLOSE"
                     on_release: root.dismiss()
                 Label:
-                    text: ""
             Label:
-                text: ""
 
 <MilionMessage@Popup>
     auto_dismiss: False
@@ -128,27 +120,23 @@ WindowManager:
         rows: 2
         Label:
             text_size: self.size
-            text: f"HELPS WILL NOT BE AVALIABLE FOR THE NEXT QUESTION"
+            text: "HELP WILL NOT BE AVALIABLE FOR THE NEXT QUESTION"
         GridLayout:
             cols: 2
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 GridLayout:
                     cols: 2
                     Label:
-                        text: ""
                     Button:
                         text_size: self.size
                         text: "OK"
                         on_release: root.dismiss()
                 Label:
-                    text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 GridLayout:
                     cols: 2
                     Button:
@@ -159,9 +147,50 @@ WindowManager:
                             app.root.current = "lose"
                             root.dismiss()
                     Label:
-                        text: ""
                 Label:
-                    text: ""
+
+<WarningBad@Popup>
+    auto_dismiss: False
+    size_hint: 0.9, 0.5
+    title: "WARNING"
+
+    GridLayout:
+        rows: 2
+        Label:
+            text: "INVALID QUESTION"
+        GridLayout:
+            rows: 3
+            Label:
+            GridLayout:
+                cols: 3
+                Label:
+                Button:
+                    text: "CLOSE"
+                    on_release: root.dismiss()
+                Label:
+            Label:
+
+<WarningGood@Popup>
+    auto_dismiss: False
+    size_hint: 0.9, 0.5
+    title: "WARNING"
+
+    GridLayout:
+        rows: 2
+        Label:
+            text: "QUESTION ADDED SUCCESSFULLY"
+        GridLayout:
+            rows: 3
+            Label:
+            GridLayout:
+                cols: 3
+                Label:
+                Button:
+                    text: "CLOSE"
+                    on_release: root.dismiss()
+                Label:
+            Label:
+
 
 <FirstScreen>
     name: "start"
@@ -175,21 +204,23 @@ WindowManager:
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
-                rows: 3
+                rows: 4
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "START"
                     on_release: app.root.current = "game"
-                Label:
-                    text: ""
+                Button:
+                    text_size: self.size
+                    text: "ADD QUESTIONS"
+                    on_release: app.root.current = "add_question"
+                Button:
+                    text_size: self.size
+                    text: "REMOVE QUESTIONS"
+                    on_release: app.root.current = "remove_question"
             Label:
-                text: ""
         Label:
-            text: ""
 
 <GameScreen>
     name: "game"
@@ -314,23 +345,18 @@ WindowManager:
                 text: "GAME OVER"
             Label:
                 id: score_message
-                text: ""
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "PLAY AGAIN"
                     on_release: app.root.current = "start"
                 Label:
-                    text: ""
             Label:
-                text: ""
 
 <WinScreen>
     name: "win"
@@ -351,16 +377,140 @@ WindowManager:
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "PLAY AGAIN"
                     on_release: app.root.current = "start"
                 Label:
-                    text: ""
             Label:
-                text: ""
+
+<AddQuestionScreen>
+    name: "add_question"
+
+    title_add: title_add
+    option1_add: option1_add
+    option2_add: option2_add
+    option3_add: option3_add
+    option4_add: option4_add
+
+    GridLayout:
+        rows: 7
+        GridLayout:
+            cols:3
+            GridLayout:
+                cols: 2
+                GridLayout:
+                    rows:2
+                    Button:
+                        text_size: self.size
+                        text: "BACK"
+                        on_release: app.root.current = "start"
+                    Label:
+                Label:
+            Label:
+                text_size: self.size
+                text: "ADD QUESTION"
+            Label:
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Title"
+            TextInput:
+                id: title_add
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Option 1 (correct)"
+            TextInput:
+                id: option1_add
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Option 2"
+            TextInput:
+                id: option2_add
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Option 3"
+            TextInput:
+                id: option3_add
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Option 4"
+            TextInput:
+                id: option4_add
+        GridLayout:
+            rows: 3
+            Label:
+            GridLayout:
+                cols: 5
+                Label:
+                Spinner:
+                    text_size: self.size
+                    id: difficulty
+                    text: "dificulty"
+                    values: ["easy","medium","hard"]
+                    on_text: root.select_difficulty(difficulty.text)
+                Label:
+                Button:
+                    text_size: self.size
+                    text: "Confirm"
+                    on_release: root.confirm()
+                Label:
+            Label:
+
+<RemoveQuestionScreen>
+    name: "remove_question"
+
+    rq_title: rq_title
+    rq_option1: rq_option1
+    rq_option2: rq_option2
+    rq_option3: rq_option3
+    rq_option4: rq_option4
+    GridLayout:
+        cols: 1
+        GridLayout:
+            rows: 5
+            Label:
+                id: rq_title
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+            Label:
+                id: rq_option1
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+            Label:
+                id: rq_option2
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+            Label:
+                id: rq_option3
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+            Label:
+                id: rq_option4
+                text_size: self.size
+                halign: 'left'
+                padding_x: 10
+
+            Button:
+                on_press: root.next_question()

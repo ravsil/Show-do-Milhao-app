@@ -18,35 +18,34 @@ class Question:
                 self.answer = i + 1
 
 
-with open("questions.json", "r") as f:
-    questions = json.loads(f.read())
+class NotEnoughQuestions(Exception):
+    pass
 
-questions_easy = []
-questions_medium = []
-questions_hard = []
 
-for i in questions:
-    if questions[i]["difficulty"] == "easy":
-        questions_easy.append(
-            Question(
-                questions[i]["title"],
-                questions[i]["options"],
-            )
-        )
-    if questions[i]["difficulty"] == "medium":
-        questions_medium.append(
-            Question(
-                questions[i]["title"],
-                questions[i]["options"],
-            )
-        )
-    if questions[i]["difficulty"] == "hard":
-        questions_hard.append(
-            Question(
-                questions[i]["title"],
-                questions[i]["options"],
-            )
-        )
+def format_index(num):
+    if num < 10:
+        return f"00{num}"
+    elif num < 100:
+        return f"0{num}"
+    else:
+        return f"{num}"
+
+
+def save_question(title, options, difficulty):
+    options[0] = f"*{options[0]}"
+
+    with open("custom_questions.json", "r") as f:
+        custom_questions = json.loads(f.read())
+
+    index = format_index(len(custom_questions) + 1)
+    custom_questions[index] = {
+        "title": title,
+        "options": options,
+        "difficulty": difficulty,
+    }
+    with open("custom_questions.json", "w") as f:
+        f.write(json.dumps(custom_questions, indent=4))
+
 
 # checks if selected option is right or wrong
 def check_answer(obj, option):
@@ -149,3 +148,67 @@ def reload_options(obj):
     for option in options:
         if option.disabled:
             option.disabled = False
+
+
+try:
+    with open("custom_questions.json", "r") as f:
+        questions = json.loads(f.read())
+    # for the game to work at least 24 questions are needed
+    # 3 easy + 7 medium + 5 hard + 3 skips for each
+    if len(questions) < 24:
+        raise NotEnoughQuestions
+    else:
+        easy = 0
+        medium = 0
+        hard = 0
+
+        for i in questions:
+            difficulty = questions[i]["difficulty"]
+            if difficulty == "easy":
+                easy += 1
+            elif difficulty == "medium":
+                medium += 1
+            elif difficulty == "hard":
+                hard += 1
+
+        if easy + medium + hard < 24:
+            raise NotEnoughQuestions
+
+    custom = True
+    del easy, medium, hard
+
+except (NotEnoughQuestions, FileNotFoundError) as error:
+    if type(error) == FileNotFoundError:
+        with open("custom_questions.json", "w") as f:
+            f.write(json.dumps({}))
+
+    with open("questions.json", "r") as f:
+        questions = json.loads(f.read())
+    custom = False
+
+questions_easy = []
+questions_medium = []
+questions_hard = []
+
+for i in questions:
+    if questions[i]["difficulty"] == "easy":
+        questions_easy.append(
+            Question(
+                questions[i]["title"],
+                questions[i]["options"],
+            )
+        )
+    if questions[i]["difficulty"] == "medium":
+        questions_medium.append(
+            Question(
+                questions[i]["title"],
+                questions[i]["options"],
+            )
+        )
+    if questions[i]["difficulty"] == "hard":
+        questions_hard.append(
+            Question(
+                questions[i]["title"],
+                questions[i]["options"],
+            )
+        )

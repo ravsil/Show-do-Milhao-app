@@ -170,8 +170,7 @@ WindowManager:
         rows: 3
         Label:
             text_size: self.size
-            markup: True
-            text: "SHOW DO MILHÃO - [s]QATAR[/s] EDITION"
+            text: "SHOW DO MILHÃO"
         # ugly way of centering the button and making it small
         GridLayout:
             cols: 3
@@ -259,7 +258,7 @@ WindowManager:
                     text_size: self.size
                     id: cards
                     text: "CARTAS"
-                    on_release: Factory.MilionMessage().open()
+                    on_release: Factory.Cards().open()
                 Button:
                     text_size: self.size
                     id: signs

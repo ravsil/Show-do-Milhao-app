@@ -1,6 +1,6 @@
-# NOTE: multiple labels with empty text were used to
-# arrange the layout nicely, I could make it in a
-# better way but this is just faster for me
+# NOTE: multiple empty labels were used to arrange
+# the layout nicely. I could make it in a better
+# way but this is just faster for me
 
 #:import Factory kivy.factory.Factory
 WindowManager:
@@ -8,7 +8,8 @@ WindowManager:
     GameScreen:
     LoseScreen:
     WinScreen:
-    
+    AddQuestionScreen:
+    AdvancedScreen:    
 
 <GridLayout>
     size: root.width, root.height
@@ -28,6 +29,9 @@ WindowManager:
     on_press: self.background_color = (1, 0, 0, 1)
     # white text
     color: (1, 1, 1, 1)
+
+<TextInput>
+    multiline: False
 
 <Cards@Popup>
     auto_dismiss: False
@@ -59,7 +63,6 @@ WindowManager:
                     app.root.cards_help()
                     root.dismiss()
         Label:
-            text: ""
         Button:
             text_size: self.size
             text: "CANCELAR"
@@ -78,19 +81,15 @@ WindowManager:
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "FECHAR"
                     on_release: root.dismiss()
                 Label:
-                    text: ""
             Label:
-                text: ""
 
 <Academicals@Popup>
     auto_dismiss: False
@@ -105,19 +104,15 @@ WindowManager:
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "FECHAR"
                     on_release: root.dismiss()
                 Label:
-                    text: ""
             Label:
-                text: ""
 
 <MilionMessage@Popup>
     auto_dismiss: False
@@ -128,27 +123,23 @@ WindowManager:
         rows: 2
         Label:
             text_size: self.size
-            text: f"AJUDAS NÃO SERÃO DISPONIBILIZADAS PARA A PRÓXIMA PERGUNTA"
+            text: "AJUDAS NÃO SERÃO DISPONIBILIZADAS PARA A PRÓXIMA PERGUNTA"
         GridLayout:
             cols: 2
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 GridLayout:
                     cols: 2
                     Label:
-                        text: ""
                     Button:
                         text_size: self.size
                         text: "OK"
                         on_release: root.dismiss()
                 Label:
-                    text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 GridLayout:
                     cols: 2
                     Button:
@@ -159,9 +150,50 @@ WindowManager:
                             app.root.current = "lose"
                             root.dismiss()
                     Label:
-                        text: ""
                 Label:
-                    text: ""
+
+<WarningBad@Popup>
+    auto_dismiss: False
+    size_hint: 0.9, 0.5
+    title: "ATENÇÃO"
+
+    GridLayout:
+        rows: 2
+        Label:
+            text: "ITEM INVÁLIDO"
+        GridLayout:
+            rows: 3
+            Label:
+            GridLayout:
+                cols: 3
+                Label:
+                Button:
+                    text: "FECHAR"
+                    on_release: root.dismiss()
+                Label:
+            Label:
+
+<WarningGood@Popup>
+    auto_dismiss: False
+    size_hint: 0.9, 0.5
+    title: "ATENÇÃO"
+
+    GridLayout:
+        rows: 2
+        Label:
+            text: "ITEM SALVO COM SUCESSO"
+        GridLayout:
+            rows: 3
+            Label:
+            GridLayout:
+                cols: 3
+                Label:
+                Button:
+                    text: "FECHAR"
+                    on_release: root.dismiss()
+                Label:
+            Label:
+
 
 <FirstScreen>
     name: "start"
@@ -175,21 +207,19 @@ WindowManager:
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "INICIAR"
                     on_release: app.root.current = "game"
-                Label:
-                    text: ""
+                Button:
+                    text_size: self.size
+                    text: "ADICIONAR PERGUNTAS"
+                    on_release: app.root.current = "add_question"
             Label:
-                text: ""
         Label:
-            text: ""
 
 <GameScreen>
     name: "game"
@@ -314,23 +344,18 @@ WindowManager:
                 text: "FIM DE JOGO"
             Label:
                 id: score_message
-                text: ""
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "JOGAR NOVAMENTE"
                     on_release: app.root.current = "start"
                 Label:
-                    text: ""
             Label:
-                text: ""
 
 <WinScreen>
     name: "win"
@@ -351,16 +376,132 @@ WindowManager:
         GridLayout:
             cols: 3
             Label:
-                text: ""
             GridLayout:
                 rows: 3
                 Label:
-                    text: ""
                 Button:
                     text_size: self.size
                     text: "JOGAR NOVAMENTE"
                     on_release: app.root.current = "start"
                 Label:
-                    text: ""
             Label:
-                text: ""
+
+<AddQuestionScreen>
+    name: "add_question"
+
+    title_add: title_add
+    option1_add: option1_add
+    option2_add: option2_add
+    option3_add: option3_add
+    option4_add: option4_add
+
+    GridLayout:
+        rows: 7
+        GridLayout:
+            cols:3
+            GridLayout:
+                cols: 2
+                GridLayout:
+                    rows:2
+                    Button:
+                        text_size: self.size
+                        text: "VOLTAR"
+                        on_release: app.root.current = "start"
+                    Label:
+                Label:
+            Label:
+                text_size: self.size
+                text: "ADICIONAR PERGUNTA"
+            GridLayout:
+                cols: 2
+                Label:
+                GridLayout:
+                    rows:2
+                    Button:
+                        text_size: self.size
+                        text: "AVANÇADO"
+                        on_release: app.root.current = "advanced"
+                    Label:
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Título"
+            TextInput:
+                id: title_add
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Opção 1 (correta)"
+            TextInput:
+                id: option1_add
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Opção 2"
+            TextInput:
+                id: option2_add
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Opção 3"
+            TextInput:
+                id: option3_add
+        GridLayout:
+            rows: 2
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Opção 4"
+            TextInput:
+                id: option4_add
+        GridLayout:
+            rows: 3
+            Label:
+            GridLayout:
+                cols: 5
+                Label:
+                Spinner:
+                    text_size: self.size
+                    id: difficulty
+                    text: "dificuldade"
+                    values: ["fácil","médio","difícil"]
+                    on_text: root.select_difficulty(difficulty.text)
+                Label:
+                Button:
+                    text_size: self.size
+                    text: "Confirmar"
+                    on_release: root.confirm()
+                Label:
+            Label:
+
+<AdvancedScreen>
+    name: "advanced"
+
+    custom_json: custom_json
+
+    FloatLayout:
+        TextInput:
+            id: custom_json
+            size_hint: 1, 0.9
+            pos_hint: {"top": 1}
+            multiline: True
+        # wanted to update it when changing screen but didn't know how
+        Button:
+            size_hint: 0.5, 0.1
+            text: "CARREGAR DADOS"
+            on_release:
+                root.update_text()
+        Button:
+            size_hint: 0.5, 0.1
+            pos_hint: {"right": 1}
+            text: "CONFIRMAR"
+            on_release:
+                root.save_custom()

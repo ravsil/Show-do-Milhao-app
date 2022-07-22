@@ -419,7 +419,7 @@ WindowManager:
                     rows:2
                     Button:
                         text_size: self.size
-                        text: "ADVANCED"
+                        text: "JSON"
                         on_release: app.root.current = "advanced"
                     Label:
         GridLayout:
@@ -471,7 +471,7 @@ WindowManager:
                 Spinner:
                     text_size: self.size
                     id: difficulty
-                    text: "difficulty"
+                    text: "Mode"
                     values: ["easy","medium","hard"]
                     on_text: root.select_difficulty(difficulty.text)
                 Label:

@@ -9,7 +9,7 @@ WindowManager:
     LoseScreen:
     WinScreen:
     AddQuestionScreen:
-    RemoveQuestionScreen:    
+    AdvancedScreen:    
 
 <GridLayout>
     size: root.width, root.height
@@ -29,6 +29,9 @@ WindowManager:
     on_press: self.background_color = (1, 0, 0, 1)
     # white text
     color: (1, 1, 1, 1)
+
+<TextInput>
+    multiline: False
 
 <Cards@Popup>
     auto_dismiss: False
@@ -157,7 +160,7 @@ WindowManager:
     GridLayout:
         rows: 2
         Label:
-            text: "INVALID QUESTION"
+            text: "INVALID ENTRY"
         GridLayout:
             rows: 3
             Label:
@@ -178,7 +181,7 @@ WindowManager:
     GridLayout:
         rows: 2
         Label:
-            text: "QUESTION ADDED SUCCESSFULLY"
+            text: "ENTRY SAVED SUCCESSFULLY"
         GridLayout:
             rows: 3
             Label:
@@ -205,7 +208,7 @@ WindowManager:
             cols: 3
             Label:
             GridLayout:
-                rows: 4
+                rows: 3
                 Label:
                 Button:
                     text_size: self.size
@@ -215,10 +218,6 @@ WindowManager:
                     text_size: self.size
                     text: "ADD QUESTIONS"
                     on_release: app.root.current = "add_question"
-                Button:
-                    text_size: self.size
-                    text: "REMOVE QUESTIONS"
-                    on_release: app.root.current = "remove_question"
             Label:
         Label:
 
@@ -413,7 +412,16 @@ WindowManager:
             Label:
                 text_size: self.size
                 text: "ADD QUESTION"
-            Label:
+            GridLayout:
+                cols: 2
+                Label:
+                GridLayout:
+                    rows:2
+                    Button:
+                        text_size: self.size
+                        text: "ADVANCED"
+                        on_release: app.root.current = "advanced"
+                    Label:
         GridLayout:
             rows: 2
             Label:
@@ -463,7 +471,7 @@ WindowManager:
                 Spinner:
                     text_size: self.size
                     id: difficulty
-                    text: "dificulty"
+                    text: "difficulty"
                     values: ["easy","medium","hard"]
                     on_text: root.select_difficulty(difficulty.text)
                 Label:
@@ -474,43 +482,26 @@ WindowManager:
                 Label:
             Label:
 
-<RemoveQuestionScreen>
-    name: "remove_question"
+<AdvancedScreen>
+    name: "advanced"
 
-    rq_title: rq_title
-    rq_option1: rq_option1
-    rq_option2: rq_option2
-    rq_option3: rq_option3
-    rq_option4: rq_option4
-    GridLayout:
-        cols: 1
-        GridLayout:
-            rows: 5
-            Label:
-                id: rq_title
-                text_size: self.size
-                halign: 'left'
-                padding_x: 10
-            Label:
-                id: rq_option1
-                text_size: self.size
-                halign: 'left'
-                padding_x: 10
-            Label:
-                id: rq_option2
-                text_size: self.size
-                halign: 'left'
-                padding_x: 10
-            Label:
-                id: rq_option3
-                text_size: self.size
-                halign: 'left'
-                padding_x: 10
-            Label:
-                id: rq_option4
-                text_size: self.size
-                halign: 'left'
-                padding_x: 10
+    custom_json: custom_json
 
-            Button:
-                on_press: root.next_question()
+    FloatLayout:
+        TextInput:
+            id: custom_json
+            size_hint: 1, 0.9
+            pos_hint: {"top": 1}
+            multiline: True
+        # wanted to update it when changing screen but didn't know how
+        Button:
+            size_hint: 0.5, 0.1
+            text: "LOAD DATA"
+            on_release:
+                root.update_text()
+        Button:
+            size_hint: 0.5, 0.1
+            pos_hint: {"right": 1}
+            text: "CONFIRM"
+            on_release:
+                root.save_custom()

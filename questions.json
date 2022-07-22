@@ -443,7 +443,7 @@
         "title": "WHICH PAINTING WAS NOT MADE BY VINCENT VAN GOGH?",
         "options": [
             "*THE NINTH WAVE",
-            "CAF&EACUTE; TERRACE AT NIGHT",
+            "CAFÉ TERRACE AT NIGHT",
             "BEDROOM IN ARLES",
             "STARRY NIGHT"
         ],
@@ -815,7 +815,7 @@
             "*POLSKA",
             "PUPCIA",
             "POLSZKA",
-            "P&OACUTE;LAND"
+            "PÓLAND"
         ],
         "difficulty": "easy"
     },
@@ -1530,7 +1530,7 @@
         "difficulty": "medium"
     },
     "154": {
-        "title": "WHAT IS THE AREA OF A CIRCLE WITH A DIAMETER OF 20 INCHES IF &PI;= 3.1415?",
+        "title": "WHAT IS THE AREA OF A CIRCLE WITH A DIAMETER OF 20 INCHES IF PI= 3.1415?",
         "options": [
             "*314.15 INCHES",
             "380.1215 INCHES",
@@ -1703,7 +1703,7 @@
         "title": "WHO WAS THE MAIN ANTAGONIST OF MAX PAYNE 3 (2012)?",
         "options": [
             "*VICTOR BRANCO",
-            "&AACUTE;LVARO NEVES",
+            "ÁLVARO NEVES",
             "ARMANDO BECKER",
             "MILO REGO"
         ],
@@ -1720,7 +1720,7 @@
         "difficulty": "medium"
     },
     "173": {
-        "title": "IN NARUTO: SHIPPUDEN, WHICH OF THE FOLLOWING ELEMENTS IS A 'KEKKEI T\u014cTA?'",
+        "title": "IN NARUTO: SHIPPUDEN, WHICH OF THE FOLLOWING ELEMENTS IS A 'KEKKEI TOTA?'",
         "options": [
             "*PARTICLE STYLE",
             "ANY DOUJUTSU",
@@ -1820,7 +1820,7 @@
         "difficulty": "medium"
     },
     "183": {
-        "title": "IN THE GAME POK&EACUTE;MON CONQUEST, HOW MANY KINGDOMS MAKE UP THE REGION OF RANSEI?",
+        "title": "IN THE GAME POKÉMON CONQUEST, HOW MANY KINGDOMS MAKE UP THE REGION OF RANSEI?",
         "options": [
             "*17",
             "18",
@@ -1874,7 +1874,7 @@
         "options": [
             "*SONIC THE HEDGEHOG 3",
             "SONIC THE HEDGEHOG 2",
-            "SONIC &AMP; KNUCKLES",
+            "SONIC & KNUCKLES",
             "SONIC ADVENTURE"
         ],
         "difficulty": "medium"
@@ -1982,20 +1982,20 @@
     "199": {
         "title": "PSYCH-HORROR 'ETERNAL DARKNESS: SANITY'S REQUIEM', DEVELOPED BY SILICON KNIGHTS IN 2002, WAS PUBLISHED BY WHO AND ON WHAT PLATFORM?",
         "options": [
-            "*NINTENDO&REG; CO. LTD. | GAMECUBE&TRADE;",
-            "SONY&REG; COMPUTER ENTERTAINMENT&TRADE; INC. | PLAYSTATION&REG; 2",
-            "MICROSOFT&REG; GAME STUDIOS&TRADE; | XBOX&TRADE;",
-            "SEGA&REG; ENTERPRISES CO. LTD. | DREAMCAST&TRADE;"
+            "*NINTENDO®️ CO. LTD. | GAMECUBE™️,",
+            "SONY®️ COMPUTER ENTERTAINMENT™️, INC. | PLAYSTATION®️ 2",
+            "MICROSOFT®️ GAME STUDIOS™️, | XBOX™️,",
+            "SEGA®️ ENTERPRISES CO. LTD. | DREAMCAST™️,"
         ],
         "difficulty": "medium"
     },
     "200": {
         "title": "WHICH TWO MODERN-DAY COUNTRIES USED TO BE KNOWN AS THE REGION OF RHODESIA BETWEEN THE 1890S AND 1980?",
         "options": [
-            "*ZAMBIA &AMP; ZIMBABWE",
-            "TOGO &AMP; BENIN",
-            "LESOTHO &AMP; SWAZILAND",
-            "RWANDA &AMP; BURUNDI"
+            "*ZAMBIA & ZIMBABWE",
+            "TOGO & BENIN",
+            "LESOTHO & SWAZILAND",
+            "RWANDA & BURUNDI"
         ],
         "difficulty": "medium"
     },
@@ -2152,10 +2152,10 @@
     "216": {
         "title": "AT WHAT TEMPERATURE DOES WATER BOIL?",
         "options": [
-            "*212&DEG;F",
-            "200&DEG;F",
-            "181&DEG;F",
-            "178&DEG;F"
+            "*212°F",
+            "200°F",
+            "181°F",
+            "178°F"
         ],
         "difficulty": "medium"
     },
@@ -2350,7 +2350,7 @@
         "difficulty": "medium"
     },
     "236": {
-        "title": "THE WEBSITE 'SHUT UP &AMP; SIT DOWN' REVIEWS WHICH FORM OF MEDIA?",
+        "title": "THE WEBSITE 'SHUT UP & SIT DOWN' REVIEWS WHICH FORM OF MEDIA?",
         "options": [
             "*BOARD GAMES",
             "TELEVISION SHOWS",
@@ -2612,10 +2612,10 @@
     "262": {
         "title": "WHAT TWO CHARACTERS FROM THE GAME UNDERTALE ARE NEVER IN A RELATIONSHIP OR NOT RELATED?",
         "options": [
-            "*FRISK &AMP; CHARA",
-            "SANS &AMP; PAPYRUS",
-            "TORIEL &AMP; ASGORE",
-            "ALPHYS &AMP; UNDYNE"
+            "*FRISK & CHARA",
+            "SANS & PAPYRUS",
+            "TORIEL & ASGORE",
+            "ALPHYS & UNDYNE"
         ],
         "difficulty": "medium"
     },
@@ -2740,7 +2740,7 @@
         "difficulty": "medium"
     },
     "275": {
-        "title": "WHAT IS THE FIRST TRACK ON KANYE WEST'S 808S &AMP; HEARTBREAK?",
+        "title": "WHAT IS THE FIRST TRACK ON KANYE WEST'S 808S & HEARTBREAK?",
         "options": [
             "*SAY YOU WILL",
             "WELCOME TO HEARTBREAK",
@@ -3253,7 +3253,7 @@
         "title": "WHICH FRANCHISE HAD A SPECIAL EVENT HOSTED IN THE POPULAR MMORPG FINAL FANTASY XIV: A REALM REBORN?",
         "options": [
             "*YO-KAI WATCH",
-            "POK&EACUTE;MON",
+            "POKÉMON",
             "YU-GI-OH",
             "BUDDYFIGHT"
         ],
@@ -3353,7 +3353,7 @@
         "title": "WHICH OF THESE IS THE ONLY FIGHTER IN THE GAME 'SUPER SMASH BROS. MELEE' CAPABLE OF DEALING DAMAGE WITH THEIR TAUNT ANIMATION?",
         "options": [
             "*LUIGI",
-            "MR. GAME &AMP; WATCH",
+            "MR. GAME & WATCH",
             "JIGGLYPUFF",
             "PICHU"
         ],
@@ -4010,7 +4010,7 @@
         "difficulty": "medium"
     },
     "402": {
-        "title": "IN THE MOVIE &LDQUO;THE IRON GIANT,&RDQUO; THIS CHARACTER IS THE PROTAGONIST.",
+        "title": "IN THE MOVIE 'THE IRON GIANT,' THIS CHARACTER IS THE PROTAGONIST.",
         "options": [
             "*HOGARTH HUGHES",
             "KENT MANSLEY",
@@ -4350,7 +4350,7 @@
         "difficulty": "medium"
     },
     "436": {
-        "title": "THE WALLS OF THE GOLDENROD CITY GYM IN 'POK&EACUTE;MON GOLD AND SILVER' ARE ARRANGED IN THE SHAPE OF WHICH POK&EACUTE;MON?",
+        "title": "THE WALLS OF THE GOLDENROD CITY GYM IN 'POKÉMON GOLD AND SILVER' ARE ARRANGED IN THE SHAPE OF WHICH POKÉMON?",
         "options": [
             "*CLEFAIRY",
             "BULBASAUR",
@@ -4480,7 +4480,7 @@
         "difficulty": "medium"
     },
     "449": {
-        "title": "THE FORMERLY EAST-PRUSSIAN CITY OF K&OUML;NIGSBERG IS KNOWN AS WHICH RUSSIAN CITY TODAY?",
+        "title": "THE FORMERLY EAST-PRUSSIAN CITY OF KONIGSBERG IS KNOWN AS WHICH RUSSIAN CITY TODAY?",
         "options": [
             "*KALININGRAD",
             "KAZAN",
@@ -4602,9 +4602,9 @@
     "461": {
         "title": "WHAT IS THE SWEDISH WORD FOR 'WINDOW'?",
         "options": [
-            "*F&OUML;NSTER",
-            "H&ARING;L",
-            "SK&AUML;RM",
+            "*FONSTER",
+            "HAL",
+            "SKARM",
             "RUTA"
         ],
         "difficulty": "medium"
@@ -4670,7 +4670,7 @@
         "difficulty": "medium"
     },
     "468": {
-        "title": "WHICH SOCCER TEAM WON THE COPA AM&EACUTE;RICA CENTENARIO 2016?",
+        "title": "WHICH SOCCER TEAM WON THE COPA AMÉRICA CENTENARIO 2016?",
         "options": [
             "*CHILE",
             "ARGENTINA",
@@ -4720,7 +4720,7 @@
         "difficulty": "medium"
     },
     "473": {
-        "title": "IN THE POK&EACUTE;MON SERIES, WHICH TYPE IS SUDOWOODO, THE IMITATION POK&EACUTE;MON?",
+        "title": "IN THE POKÉMON SERIES, WHICH TYPE IS SUDOWOODO, THE IMITATION POKÉMON?",
         "options": [
             "*ROCK",
             "GRASS",
@@ -4990,7 +4990,7 @@
         "difficulty": "medium"
     },
     "500": {
-        "title": "THE FORMERLY EAST-PRUSSIAN CITY OF K&OUML;NIGSBERG IS KNOWN AS WHICH RUSSIAN CITY TODAY?",
+        "title": "THE FORMERLY EAST-PRUSSIAN CITY OF KONIGSBERG IS KNOWN AS WHICH RUSSIAN CITY TODAY?",
         "options": [
             "*KALININGRAD",
             "KAZAN",
@@ -5222,15 +5222,15 @@
     "523": {
         "title": "WHAT KIND OF TRAIN WAS STEPNEY, A TRAIN ON THE BLUEBELL RAILWAY NOTABLE FOR HIS APPEARANCE IN 'THE RAILWAY SERIES'?",
         "options": [
-            "*LB&AMP;SCR A1X",
-            "LB&AMP;SCR E2",
-            "LB&AMP;SCR J1",
-            "LB&AMP;SCR D1"
+            "*LB&SCR A1X",
+            "LB&SCR E2",
+            "LB&SCR J1",
+            "LB&SCR D1"
         ],
         "difficulty": "hard"
     },
     "524": {
-        "title": "WHICH OF THESE CITIES HAS A 4&DEG; EAST LONGITUDE. ",
+        "title": "WHICH OF THESE CITIES HAS A 4° EAST LONGITUDE. ",
         "options": [
             "*AMSTERDAM",
             "RIO DE JANERO",
@@ -5260,7 +5260,7 @@
         "difficulty": "hard"
     },
     "527": {
-        "title": "IN 'POK&EACUTE;MON SUN AND MOON', TEAM SKULL TOOK OVER WHICH TOWN?",
+        "title": "IN 'POKÉMON SUN AND MOON', TEAM SKULL TOOK OVER WHICH TOWN?",
         "options": [
             "*PO TOWN",
             "HEAHEA CITY",
@@ -5292,7 +5292,7 @@
     "530": {
         "title": "IN WHICH MANGA DID THE '404 GIRL' FROM 4CHAN ORIGINATE FROM?",
         "options": [
-            "*YOTSUBA&AMP;!",
+            "*YOTSUBA!",
             "AZUMANGA DAIOH",
             "LUCKY STAR",
             "CLOVER"
@@ -5362,10 +5362,10 @@
     "537": {
         "title": "IN 'NEED FOR SPEED III: HOT PURSUIT', WHAT IS THE NAME OF THE FICTIONAL CAR?",
         "options": [
-            "*EL NI&NTILDE;O",
-            "R&AACUTE;PIDO",
-            "&AACUTE;GIL",
-            "LA NI&NTILDE;A"
+            "*EL NIÑO",
+            "RÁPIDO",
+            "ÁGIL",
+            "LA NIÑA"
         ],
         "difficulty": "hard"
     },
@@ -5475,7 +5475,7 @@
             "*DJ_HYPERFRESH",
             "MC.PRINCESS",
             "KIDNOTSQUID123",
-            "I&LT;30FFTH3H00K"
+            "I<30FFTH3H00K"
         ],
         "difficulty": "hard"
     },
@@ -5553,7 +5553,7 @@
         "title": "WHICH OF THESE ARTISTS DID NOT REMIX THE SONG 'FADED' BY ALAN WALKER?",
         "options": [
             "*SKRILLEX",
-            "TI&EUML;STO",
+            "TIESTO",
             "SLUSHII",
             "DASH BERLIN"
         ],
@@ -5743,7 +5743,7 @@
         "title": "IN 2008, BRITISH CELEBRITY CHEF GORDON RAMSAY BELIEVES HE ALMOST DIED AFTER SUFFERING WHAT ACCIDENT IN ICELAND WHILE FILMING?",
         "options": [
             "*SLIPPING OFF A CLIFF, AND NEARLY DROWNING IN ICY WATER",
-            "CRASH LANDING WHEN ARRIVING AT KEFLAV&IACUTE;K AIRPORT",
+            "CRASH LANDING WHEN ARRIVING AT KEFLAVÍK AIRPORT",
             "A MINOR CAR ACCIDENT IN A SNOWSTORM",
             "BEING SERVED UNDER-COOKED CHICKEN AT HIS HOTEL"
         ],
@@ -5960,7 +5960,7 @@
         "difficulty": "hard"
     },
     "597": {
-        "title": "WHAT IS THE FOURTH DIGIT OF &PI;?",
+        "title": "WHAT IS THE FOURTH DIGIT OF PI?",
         "options": [
             "*1",
             "2",
@@ -5972,10 +5972,10 @@
     "598": {
         "title": "IN THE 1974 CHRISTMAS FLICK 'THE YEAR WITHOUT A SANTA CLAUS,' WHAT ARE THE NAMES OF THE TWO ELVES WHO HELP MRS. CLAUS SAVE CHRISTMAS?",
         "options": [
-            "*JINGLE &AMP; JANGLE",
-            "BUDDY &AMP; BOBBY",
-            "HOLLY &AMP; JOLLY",
-            "SNOWFLAKE &AMP; ICICLE"
+            "*JINGLE & JANGLE",
+            "BUDDY & BOBBY",
+            "HOLLY & JOLLY",
+            "SNOWFLAKE & ICICLE"
         ],
         "difficulty": "hard"
     },
@@ -6040,7 +6040,7 @@
         "difficulty": "hard"
     },
     "605": {
-        "title": "HOW MANY MEMBERS ARE THERE IN THE IDOL GROUP '&MICRO;'S'?",
+        "title": "HOW MANY MEMBERS ARE THERE IN THE IDOL GROUP 'μ'S'?",
         "options": [
             "*9",
             "48",
@@ -6154,7 +6154,7 @@
         "options": [
             "*NAPOLEONE DI BUONAPARTE",
             "NAAPOLION VAN BONIJPAART",
-            "NAPOLE&ATILDE;O DO BOAPARTE",
+            "NAPOLEÃO DO BOAPARTE",
             "NAPOLEONA DE BUENOPARTE"
         ],
         "difficulty": "hard"
@@ -6225,7 +6225,7 @@
             "*STEVE REICH",
             "WOLFGANG AMADEUS MOZART",
             "BRIAN ENO",
-            "SIGUR R&OACUTE;S"
+            "SIGUR RÓS"
         ],
         "difficulty": "hard"
     },
@@ -6393,7 +6393,7 @@
         "title": "WHO WAS THE AUTHOR OF THE MANGA UZUMAKI?",
         "options": [
             "*JUNJI ITO",
-            "\tNOBORU TAKAHASHI",
+            "NOBORU TAKAHASHI",
             "AKIRA TORIYAMA",
             "MASASHI KISHIMOTO"
         ],
@@ -6414,7 +6414,7 @@
         "options": [
             "*PAVLOV'S DOG EXPERIMENTS",
             "SKINNER BOX EXPERIMENT",
-            "SCHR&OUML;DINGER'S CAT EXPERIMENT",
+            "SCHRODINGER'S CAT EXPERIMENT",
             "HARLOW'S MONKEY EXPERIMENTS"
         ],
         "difficulty": "hard"
@@ -6624,7 +6624,7 @@
         "options": [
             "*NAPOLEONE DI BUONAPARTE",
             "NAAPOLION VAN BONIJPAART",
-            "NAPOLE&ATILDE;O DO BOAPARTE",
+            "NAPOLEÃO DO BOAPARTE",
             "NAPOLEONA DE BUENOPARTE"
         ],
         "difficulty": "hard"
@@ -6832,7 +6832,7 @@
     "684": {
         "title": "IN WHICH MANGA DID THE '404 GIRL' FROM 4CHAN ORIGINATE FROM?",
         "options": [
-            "*YOTSUBA&AMP;!",
+            "*YOTSUBA!",
             "AZUMANGA DAIOH",
             "LUCKY STAR",
             "CLOVER"
@@ -7150,12 +7150,12 @@
         "difficulty": "hard"
     },
     "716": {
-        "title": "WHAT IS THE ENGLISH TITLE OF THE VAPORWAVE TRACK '\u30ea\u30b5\u30d5\u30e9\u30f3\u30af420 / \u73fe\u4ee3\u306e\u30b3\u30f3\u30d4\u30e5\u30fc' BY MACINTOSH PLUS (VEKTROID)?",
+        "title": "WHO WAS DONALD TRUMP'S FIRST WIFE?",
         "options": [
-            "*LISA FRANK 420 / MODERN COMPUTING",
-            "SMOKE WEED 420 / EVERYDAY",
-            "MAKE YOUR MOVE 420 / MY MIND",
-            "IT'S ALL IN YOUR HEAD 420 / UNDERSTAND"
+            "*IVANA ZELNICKOVA",
+            "MELANIA KNAUSS",
+            "MARLA MAPLES",
+            "NANCY DAVIS"
         ],
         "difficulty": "hard"
     },
@@ -7170,7 +7170,7 @@
         "difficulty": "hard"
     },
     "718": {
-        "title": "IN LES MIS&EACUTE;RABLES, WHO IS PRISON CODE 24601?",
+        "title": "IN LES MISÉRABLES, WHO IS PRISON CODE 24601?",
         "options": [
             "*JEAN VALJEAN",
             "MARIUS PONTMERCY",
@@ -7203,18 +7203,18 @@
         "title": "WHICH ONE OF THESE SWEDISH COMPANIES WAS FOUNDED IN 1943?",
         "options": [
             "*IKEA",
-            "H &AMP; M",
+            "H & M",
             "LINDEX",
             "CLAS OHLSON"
         ],
         "difficulty": "hard"
     },
     "722": {
-        "title": "WHAT DO YOU DECLARE IN R\u012aCHI MAHJONG WHEN YOU'VE DRAWN YOUR WINNING TILE?",
+        "title": "WHAT DO YOU DECLARE IN RICHI MAHJONG WHEN YOU'VE DRAWN YOUR WINNING TILE?",
         "options": [
             "*TSUMO",
             "RON",
-            "R\u012aCHI",
+            "RICHI",
             "KAN"
         ],
         "difficulty": "hard"
@@ -7372,7 +7372,7 @@
     "738": {
         "title": "IN WHICH MANGA DID THE '404 GIRL' FROM 4CHAN ORIGINATE FROM?",
         "options": [
-            "*YOTSUBA&AMP;!",
+            "*YOTSUBA!",
             "AZUMANGA DAIOH",
             "LUCKY STAR",
             "CLOVER"
@@ -7392,10 +7392,10 @@
     "740": {
         "title": "IN 'NEED FOR SPEED III: HOT PURSUIT', WHAT IS THE NAME OF THE FICTIONAL CAR?",
         "options": [
-            "*EL NI&NTILDE;O",
-            "R&AACUTE;PIDO",
-            "&AACUTE;GIL",
-            "LA NI&NTILDE;A"
+            "*EL NIÑO",
+            "RÁPIDO",
+            "ÁGIL",
+            "LA NIÑA"
         ],
         "difficulty": "hard"
     },
@@ -7433,7 +7433,7 @@
         "title": "WHO WAS THE AUTHOR OF THE MANGA UZUMAKI?",
         "options": [
             "*JUNJI ITO",
-            "\tNOBORU TAKAHASHI",
+            "NOBORU TAKAHASHI",
             "AKIRA TORIYAMA",
             "MASASHI KISHIMOTO"
         ],

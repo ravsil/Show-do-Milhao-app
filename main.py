@@ -1,3 +1,4 @@
+import json
 from random import randrange
 
 from kivy.app import App
@@ -17,6 +18,7 @@ from utils import (
     save_question,
     signs_rng,
     skip,
+    validate_dict,
 )
 
 
@@ -136,32 +138,24 @@ class AddQuestionScreen(Screen):
             Factory.WarningBad().open()
 
 
-class RemoveQuestionScreen(Screen):
-    rq_title = ObjectProperty(None)
-    rq_option1 = ObjectProperty(None)
-    rq_option2 = ObjectProperty(None)
-    rq_option3 = ObjectProperty(None)
-    rq_option4 = ObjectProperty(None)
+class AdvancedScreen(Screen):
+    custom_json = ObjectProperty(None)
 
-    questions = questions_easy[:] + questions_medium[:] + questions_hard[:]
-    index = 0
-    index_limit = len(questions) - 1
+    def update_text(self):
+        with open("custom_questions.json", "r") as f:
+            tmp = f.read()
+        self.custom_json.text = tmp
 
-    def next_question(self):
-        question = self.questions[self.index]
-        option_indexes = [0, 1, 2, 3]
-        option_indexes.remove(question.answer - 1)
-
-        self.rq_title.text = question.title
-        self.rq_option1.text = question.options[question.answer - 1]
-        self.rq_option2.text = question.options[option_indexes[0]]
-        self.rq_option3.text = question.options[option_indexes[1]]
-        self.rq_option4.text = question.options[option_indexes[2]]
-
-        if self.index < self.index_limit:
-            self.index += 1
-        else:
-            self.index = 0
+    def save_custom(self):
+        try:
+            tmp = validate_dict(json.loads(self.custom_json.text))
+            with open("custom_questions.json", "w") as f:
+                f.write(json.dumps(tmp, indent=4))
+            Factory.WarningGood().open()
+            self.custom_json.text = ""
+            self.manager.current = "add_question"
+        except json.decoder.JSONDecodeError:
+            Factory.WarningBad().open()
 
 
 class ShowDoMilhao(App):

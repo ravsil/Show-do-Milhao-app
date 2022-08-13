@@ -148,6 +148,7 @@ WindowManager:
                         on_release: 
                             app.root.give_up()
                             app.root.current = "lose"
+                            app.root.transition.direction = "up"
                             root.dismiss()
                     Label:
                 Label:
@@ -213,11 +214,15 @@ WindowManager:
                 Button:
                     text_size: self.size
                     text: "INICIAR"
-                    on_release: app.root.current = "game"
+                    on_release: 
+                        app.root.current = "game"
+                        root.manager.transition.direction = "left"
                 Button:
                     text_size: self.size
                     text: "ADICIONAR PERGUNTAS"
-                    on_release: app.root.current = "add_question"
+                    on_release: 
+                        app.root.current = "add_question"
+                        root.manager.transition.direction = "left"
             Label:
         Label:
 
@@ -326,6 +331,7 @@ WindowManager:
                     on_release:
                         root.stop()
                         app.root.current = "lose"
+                        root.manager.transition.direction = "up"
                 Label:
                     text_size: self.size
                     text: "PRÓXIMO:"
@@ -353,7 +359,9 @@ WindowManager:
                 Button:
                     text_size: self.size
                     text: "JOGAR NOVAMENTE"
-                    on_release: app.root.current = "start"
+                    on_release: 
+                        app.root.current = "start"
+                        root.manager.transition.direction = "right"
                 Label:
             Label:
 
@@ -382,7 +390,9 @@ WindowManager:
                 Button:
                     text_size: self.size
                     text: "JOGAR NOVAMENTE"
-                    on_release: app.root.current = "start"
+                    on_release: 
+                        app.root.current = "start"
+                        root.manager.transition.direction = "right"
                 Label:
             Label:
 
@@ -406,7 +416,9 @@ WindowManager:
                     Button:
                         text_size: self.size
                         text: "VOLTAR"
-                        on_release: app.root.current = "start"
+                        on_release: 
+                            app.root.current = "start"
+                            root.manager.transition.direction = "right"
                     Label:
                 Label:
             Label:
@@ -420,7 +432,9 @@ WindowManager:
                     Button:
                         text_size: self.size
                         text: "JSON"
-                        on_release: app.root.current = "advanced"
+                        on_release: 
+                            app.root.current = "advanced"
+                            root.manager.transition.direction = "left"
                     Label:
         GridLayout:
             rows: 2
@@ -505,3 +519,4 @@ WindowManager:
             text: "CONFIRMAR"
             on_release:
                 root.save_custom()
+                root.manager.transition.direction = "right"

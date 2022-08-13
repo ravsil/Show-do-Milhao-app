@@ -109,9 +109,13 @@ def check_answer(obj, option):
         elif obj.score == 15:
             obj.score = 0
             obj.manager.current = "win"
+            obj.manager.transition.direction = "left"
+
             reload_game(obj)
     else:
         obj.manager.current = "lose"
+        obj.manager.transition.direction = "up"
+
         reload_game(obj)
 
 

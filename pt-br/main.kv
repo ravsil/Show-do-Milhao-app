@@ -201,9 +201,11 @@ WindowManager:
     
     GridLayout:
         rows: 3
-        Label:
-            text_size: self.size
-            text: "SHOW DO MILHÃO"
+        GridLayout:
+            rows: 2
+            Label:
+            Image:
+                source: "images/name.png"
         # ugly way of centering the button and making it small
         GridLayout:
             cols: 3

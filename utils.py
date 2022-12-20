@@ -137,6 +137,8 @@ def new_question(obj, question_difficulty):
     obj.two.text = f"2: {obj.question.options[1]}"
     obj.three.text = f"3: {obj.question.options[2]}"
     obj.four.text = f"4: {obj.question.options[3]}"
+    obj.cur_score.text = f"SCORE: {obj.score*250}"
+    obj.next_score.text = f"NEXT: {(obj.score+1)*250}"
 
 
 def cards_rng(obj):
@@ -172,7 +174,7 @@ def disable_help(obj):
 
 def reload_game(obj):
     # displays the score and resets the game
-    obj.manager.get_screen("lose").score_message.text = f"Score: {obj.score}"
+    obj.manager.get_screen("lose").score_message.text = f"Score: {obj.score*250}"
     obj.score = 0
     obj.game_easy = questions_easy[:]
     obj.game_medium = questions_medium[:]

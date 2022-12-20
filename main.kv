@@ -205,7 +205,7 @@ WindowManager:
             rows: 2
             Label:
             Image:
-                source: "images/name.png"
+                source: "assets/name.png"
         # ugly way of centering the button and making it small
         GridLayout:
             cols: 3
@@ -243,6 +243,8 @@ WindowManager:
     skip_2: skip_2
     skip_3: skip_3
     stop_btn: stop_btn
+    cur_score: cur_score
+    next_score: next_score
 
 
     GridLayout:
@@ -325,18 +327,20 @@ WindowManager:
                 cols: 3
                 Label:
                     text_size: self.size
-                    text: "MISS: "     
+                    id: cur_score
+                    text: f"SCORE: {root.score}"
                 Button:
                     id: stop_btn
                     text_size: self.size
-                    text: "STOP: "
+                    text: "STOP"
                     on_release:
                         root.stop()
                         app.root.current = "lose"
                         root.manager.transition.direction = "up"
                 Label:
                     text_size: self.size
-                    text: "NEXT:"
+                    id: next_score
+                    text: f"NEXT: {root.score+250}"
 
 <LoseScreen>
     name: "lose"

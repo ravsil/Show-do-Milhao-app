@@ -55,6 +55,8 @@ class GameScreen(Screen):
     skip_1 = ObjectProperty(None)
     skip_2 = ObjectProperty(None)
     skip_3 = ObjectProperty(None)
+    cur_score = ObjectProperty(None)
+    next_score = ObjectProperty(None)
 
     # makes an copy of the questions so they can be used again later
     game_easy = questions_easy[:]

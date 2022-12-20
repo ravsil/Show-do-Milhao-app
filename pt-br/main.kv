@@ -243,6 +243,8 @@ WindowManager:
     skip_2: skip_2
     skip_3: skip_3
     stop_btn: stop_btn
+    cur_score: cur_score
+    next_score: next_score
 
 
     GridLayout:
@@ -325,18 +327,20 @@ WindowManager:
                 cols: 3
                 Label:
                     text_size: self.size
-                    text: "ERRAR: "     
+                    id: cur_score
+                    text: f"PONTOS: {root.score}"
                 Button:
                     id: stop_btn
                     text_size: self.size
-                    text: "PARAR: "
+                    text: "PARAR"
                     on_release:
                         root.stop()
                         app.root.current = "lose"
                         root.manager.transition.direction = "up"
                 Label:
                     text_size: self.size
-                    text: "PRÓXIMO:"
+                    id: next_score
+                    text: f"PRÓXIMO: {root.score+250}"
 
 <LoseScreen>
     name: "lose"
